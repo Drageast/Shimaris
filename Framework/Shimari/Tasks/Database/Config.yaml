@@ -1,0 +1,5 @@
+URLS:
+  ["https://raw.githubusercontent.com/Drageast/shimari-data/master/Data.yaml"]
+
+FILES:
+  ["./Database/Data.yaml"]

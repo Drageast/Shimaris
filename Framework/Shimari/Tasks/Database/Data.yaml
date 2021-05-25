@@ -1,0 +1,323 @@
+Balancing:
+
+  Fight:
+    Subtract: [0.05, 0.15, 0.35]
+    Animus: [10, 25]
+    Block: 0.20
+
+    Elements:
+      Res: -6
+      1: 0
+      2: 2
+      3: 4
+      4: 6
+
+    Failures:
+      Min: 15
+      Max: 19
+
+  Shop:
+    Price: [300, 700, 1100, 2200]
+
+  Stats:
+    # [Hp, Animus]
+    1: [8, 0]
+    2: [16, 8]
+    3: [32, 16]
+    4: [36, 20]
+
+  Random:
+    Rarity:
+      Max: 15
+      Min: 10
+
+# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+Prototyp:
+  0000:
+    Name: ""
+    Motto: ""
+    Avatar: []
+    Type: ""
+    Rarity: 0
+    KaDa:
+      Animus: 0
+      Hp: 0
+      Elements:
+        Dmg: ""
+        Res: ""
+
+# --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+# Motto des Shimaris # ä = 1, ö = 2, ü = 3
+
+Control: [6520, 2306, 3015, 7747, 4448, 9463, 5210, 8673, 7596, 3418, 7142, 4353, 2439, 4992, 5646, 1575, 8143, 1441, 7612]
+
+ID:
+
+  # --CLASSIC--
+
+  STARTER:
+    Name: "Tabia"
+    Motto: "Ich bin der Perfekte Starter!"
+    Avatar: [ "https://i.imgur.com/L1MFNxJ.jpg" ]
+    Type: "Classic"
+    Rarity: 1
+    KaDa:
+      Animus: 56
+      Hp: 129
+      Elements:
+        Dmg: "Caeli"
+        Res: "Venom"
+
+  6520:
+    Name: "Umakii"
+    Motto: "Nichts und niemand ist so stark wie ich!"
+    Avatar: [ "https://i.imgur.com/haKwfJr.jpg", "https://i.imgur.com/JLgX8mM.jpg", "https://i.imgur.com/nGuVDX2.jpg" ]
+    Type: "Classic"
+    Rarity: 3
+    KaDa:
+      Animus: 64
+      Hp: 111
+      Elements:
+        Dmg: "Venom"
+        Res: "Daemon"
+
+  2306:
+    Name: "Fukuraj"
+    Motto: "Ich bin DER Friedensh3ter"
+    Avatar: [ "https://i.imgur.com/djyDXb5.jpg", "https://i.imgur.com/dTRWOI5.jpg", "https://i.imgur.com/EFT7HEN.jpg" ]
+    Type: "Classic"
+    Rarity: 3
+    KaDa:
+      Animus: 46
+      Hp: 126
+      Elements:
+        Dmg: "Caeli"
+        Res: "Animane"
+
+  3015:
+    Name: "Kiaria"
+    Motto: "Ich bin der Teufel unter den Engeln..."
+    Avatar: [ "https://i.imgur.com/SFJdPD7.jpg", "https://i.imgur.com/ODr9WGj.jpg", "https://i.imgur.com/t2vS6V8.jpg" ]
+    Type: "Classic"
+    Rarity: 3
+    KaDa:
+      Animus: 43
+      Hp: 175
+      Elements:
+        Dmg: "Daemon"
+        Res: "Multae"
+
+  7747:
+    Name: "Chiaki"
+    Motto: "Ich bin der K2nig der L3fte!"
+    Avatar: [ "https://i.imgur.com/gSeDqN5.jpg", "https://i.imgur.com/MvOsaeK.jpg", "https://i.imgur.com/2kNmdeZ.jpg", "https://i.imgur.com/J1RPV4C.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 63
+      Hp: 99
+      Elements:
+        Dmg: "Caeli"
+        Res: "Daemon"
+
+  4448:
+    Name: "Ichigo"
+    Motto: "Over 9000!!!"
+    Avatar: [ "https://i.imgur.com/uAfnrJ2.jpg", "https://i.imgur.com/9BhiUjK.jpg", "https://i.imgur.com/Ac5AEGX.jpg", "https://i.imgur.com/Gp3Di0W.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 58
+      Hp: 103
+      Elements:
+        Dmg: "Multae"
+        Res: "Aqua"
+
+  9463:
+    Name: "Sakayy"
+    Motto: "Gift ist alles und nichts..."
+    Avatar: [ "https://i.imgur.com/28LjV98.jpg", "https://i.imgur.com/9jmL1qj.jpg", "https://i.imgur.com/tPYksCW.jpg", "https://i.imgur.com/IjYRy91.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 69
+      Hp: 92
+      Elements:
+        Dmg: "Venom"
+        Res: "Daemon"
+
+  5210:
+    Name: "Kubo Chy"
+    Motto: "Bin ich ein Geist? Oder nicht?"
+    Avatar: [ "https://i.imgur.com/OmOM3gS.jpg", "https://i.imgur.com/aeBjXEm.jpg", "https://i.imgur.com/T102ZLD.jpg", "https://i.imgur.com/iSsD4w8.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 54
+      Hp: 124
+      Elements:
+        Dmg: "Caeli"
+        Res: "Venom"
+
+  8673:
+    Name: "Rin Kei"
+    Motto: "Die Energie ist mit mir und ich bin mit der Energie..."
+    Avatar: [ "https://i.imgur.com/hVN66fg.jpg", "https://i.imgur.com/uJOso8x.jpg", "https://i.imgur.com/4OkebCS.jpg", "https://i.imgur.com/61jxgUY.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 43
+      Hp: 141
+      Elements:
+        Dmg: "Multae"
+        Res: "Multae"
+
+  7596:
+    Name: "Aarinu"
+    Motto: "Essen hat auch Gef3hle!"
+    Avatar: [ "https://i.imgur.com/OyF6o2v.jpg", "https://i.imgur.com/p9iLYmS.jpg", "https://i.imgur.com/J9Bmmhv.jpg", "https://i.imgur.com/p9zLpVC.jpg" ]
+    Type: "Classic"
+    Rarity: 4
+    KaDa:
+      Animus: 48
+      Hp: 116
+      Elements:
+        Dmg: "Venom"
+        Res: "Venom"
+
+  # --Dark Eara--
+
+  1575:
+    Name: "Dunkler Fukuraj"
+    Motto: "Dunkelheit ist alles und nichts."
+    Avatar: [ "https://i.imgur.com/3a4hRf2.jpg", "https://i.imgur.com/Zxv5y8f.jpg", "https://i.imgur.com/xWBJ8nx.jpg", "https://i.imgur.com/DE35m4E.jpg" ]
+    Type: "Dark Era"
+    Rarity: 4
+    KaDa:
+      Animus: 56
+      Hp: 136
+      Elements:
+        Dmg: "Daemon"
+        Res: "Animane"
+
+  8143:
+    Name: "Dunkle Chiaki"
+    Motto: "Die Dunkelheit verschlingt alles..."
+    Avatar: [ "https://i.imgur.com/SsV7mHi.jpg", "https://i.imgur.com/UOTJBld.jpg", "https://i.imgur.com/GsztgXQ.jpg", "https://i.imgur.com/x4yyWit.jpg" ]
+    Type: "Dark Era"
+    Rarity: 4
+    KaDa:
+      Animus: 73
+      Hp: 109
+      Elements:
+        Dmg: "Daemon"
+        Res: "Venom"
+
+  1441:
+    Name: "Dunkler Sakayy"
+    Motto: "Die Dunkelheit verzeiht nicht..."
+    Avatar: [ "https://i.imgur.com/pZh0TJG.jpg", "https://i.imgur.com/REBLNEF.jpg", "https://i.imgur.com/7pXq1bA.jpg", "https://i.imgur.com/h9xmoP1.jpg" ]
+    Type: "Dark Era"
+    Rarity: 4
+    KaDa:
+      Animus: 59
+      Hp: 112
+      Elements:
+        Dmg: "Daemon"
+        Res: "Daemon"
+
+  7612:
+    Name: "Dunkle Rin Kei"
+    Motto: "Die Energie gleicht der Dunkelheit..."
+    Avatar: [ "https://i.imgur.com/kLuWbtA.jpg", "https://i.imgur.com/xoHbBwk.jpg", "https://i.imgur.com/lUzfgmE.jpg", "https://i.imgur.com/7UHjIbv.jpg" ]
+    Type: "Dark Era"
+    Rarity: 4
+    KaDa:
+      Animus: 73
+      Hp: 87
+      Elements:
+        Dmg: "Multae"
+        Res: "Daemon"
+
+  # --Tate Yusha no Nariagari--
+
+  3418:
+    Name: "Maaya Uchida"
+    Motto: "Recht und Ordnung!"
+    Avatar: [ "https://i.imgur.com/YD12bqa.jpg", "https://i.imgur.com/nfJvGWU.jpg", "https://i.imgur.com/qgP0q2z.jpg", "https://i.imgur.com/HkQxtIR.jpg" ]
+    Type: "Tate no Yusha no Nariagari"
+    Rarity: 4
+    KaDa:
+      Animus: 51
+      Hp: 113
+      Elements:
+        Dmg: "Aqua"
+        Res: "Caeli"
+
+  7142:
+    Name: "Rina Hidaka"
+    Motto: "Hihihi"
+    Avatar: [ "https://i.imgur.com/PFilSem.jpg", "https://i.imgur.com/iwUSq5S.jpg", "https://i.imgur.com/V028kCR.jpg", "https://i.imgur.com/O9Qtfxs.jpg" ]
+    Type: "Tate no Yusha no Nariagari"
+    Rarity: 4
+    KaDa:
+      Animus: 56
+      Hp: 106
+      Elements:
+        Dmg: "Caeli"
+        Res: "Venom"
+
+  4353:
+    Name: "Raphtalia"
+    Motto: "Ich bin das Schwert meines Meisters."
+    Avatar: [ "https://i.imgur.com/K2owOjW.jpg", "https://i.imgur.com/vWLcsFz.jpg", "https://i.imgur.com/9QBQAh7.jpg", "https://i.imgur.com/3cmifiq.jpg" ]
+    Type: "Tate no Yusha no Nariagari"
+    Rarity: 4
+    KaDa:
+      Animus: 43
+      Hp: 135
+      Elements:
+        Dmg: "Animane"
+        Res: "Daemon"
+
+  # --Assassination Classroom--
+
+  2439:
+    Name: "Koro-Sensei"
+    Motto: ""
+    Avatar: [ "https://i.imgur.com/jLvq1Sp.jpg", "https://i.imgur.com/v99YAnV.jpg", "https://i.imgur.com/exm6B03.jpg" ]
+    Type: "Assassination Classroom"
+    Rarity: 3
+    KaDa:
+      Animus: 52
+      Hp: 101
+      Elements:
+        Dmg: "Multae"
+        Res: "Aqua"
+
+  4992:
+    Name: "Nagisa Shiota"
+    Motto: ""
+    Avatar: [ "https://i.imgur.com/BES865o.jpg", "https://i.imgur.com/79IpRUl.jpg", "https://i.imgur.com/lvOxY3H.jpg", "https://i.imgur.com/2QFJdNq.jpg" ]
+    Type: "Assassination Classroom"
+    Rarity: 4
+    KaDa:
+      Animus: 43
+      Hp: 142
+      Elements:
+        Dmg: "Venom"
+        Res: "Multae"
+
+  5646:
+    Name: "Kaede Kayano"
+    Motto: ""
+    Avatar: [ "https://i.imgur.com/FNMxqmD.jpg", "https://i.imgur.com/mypObbX.jpg", "https://i.imgur.com/BnYVRet.jpg", "https://i.imgur.com/Zua3Et6.jpg" ]
+    Type: "Assassination Classroom"
+    Rarity: 4
+    KaDa:
+      Animus: 68
+      Hp: 93
+      Elements:
+        Dmg: "Aqua"
+        Res: "Caeli"

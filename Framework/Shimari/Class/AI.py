@@ -1,34 +1,32 @@
 import random
 from Framework.Shimari.Class.BASE import Base
-from Framework.Shimari.Core import BucketType, BucketError
+from Framework.Shimari.Core import BucketType, BucketError, ConstructorError
 
 
 class AI(Base):
-    def __init__(self, X: tuple, Difficulty, Opponent: Base = None):
+    """AI is used to create a Non-Player entity by inheriting from Base, using BucketType.Difficulty and an Overwrite bool for the BucketMap Protocol."""
+    def __init__(self, X: tuple, Difficulty, Opponent: Base = None, Overwrite: bool = False):
+        super().__init__(X, Overwrite=Overwrite)
 
-        super().__init__(X)
-        if isinstance(Difficulty(), BucketType.Difficulty.Easy) or isinstance(Difficulty(),
-                                                                              BucketType.Difficulty.Normal) or isinstance(
-                Difficulty(), BucketType.Difficulty.Hard):
+        if type(Difficulty()) in [BucketType.Difficulty.Easy, BucketType.Difficulty.Normal, BucketType.Difficulty.Hard]:
             self.Difficulty = Difficulty
+
             if Opponent is None and isinstance(Difficulty(), BucketType.Difficulty.Hard):
-                raise AttributeError("Opponent is a required argument for Hard BucketType!")
+                raise ConstructorError(AttributeError, "Opponent is a required argument for this BucketType!")
             self.__Opponent = Opponent
             return
         raise BucketError("Invalid BucketType")
 
     def BUCKET(self, Type):
-        if not isinstance(Type(), BucketType.Difficulty.Easy) or \
-                not isinstance(Type(), BucketType.Difficulty.Normal) or \
-                not isinstance(Type(), BucketType.Difficulty.Hard):
+        if type(Type()) not in [BucketType.Difficulty.Easy, BucketType.Difficulty.Normal, BucketType.Difficulty.Hard]:
             raise BucketError("Invalid BucketType")
         self.Difficulty = Type
 
     def ACRQfight(self):
         if isinstance(self.Difficulty(), BucketType.Difficulty.Easy):
             i = random.randint(0, 3)
-            self.__Protocol.ADD("ACRQfight", BucketType.Difficulty.Easy.__name__,
-                                {"Type": i, "Hp": self.Hp, "Animus": self.Animus})
+            self.Protocol.ADD("ACRQfight", BucketType.Difficulty.Easy.__name__,
+                              {"Type": i, "Hp": self.Hp, "Animus": self.Animus})
             return i
 
         elif isinstance(self.Difficulty(), BucketType.Difficulty.Normal):
@@ -46,8 +44,8 @@ class AI(Base):
             else:
                 retr = random.randint(0, 2)
 
-            self.__Protocol.ADD("ACRQfight", BucketType.Difficulty.Normal.__name__,
-                                {"Type": retr, "Hp": self.Hp, "Animus": self.Animus})
+            self.Protocol.ADD("ACRQfight", BucketType.Difficulty.Normal.__name__,
+                              {"Type": retr, "Hp": self.Hp, "Animus": self.Animus})
             return retr
 
         elif isinstance(self.Difficulty(), BucketType.Difficulty.Hard):
@@ -68,6 +66,6 @@ class AI(Base):
             else:
                 retr = random.randint(0, 2)
 
-            self.__Protocol.ADD("ACRQfight", BucketType.Difficulty.Hard.__name__,
-                                {"Type": retr, "Hp": self.Hp, "Animus": self.Animus})
+            self.Protocol.ADD("ACRQfight", BucketType.Difficulty.Hard.__name__,
+                              {"Type": retr, "Hp": self.Hp, "Animus": self.Animus})
             return retr

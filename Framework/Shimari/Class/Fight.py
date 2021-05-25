@@ -1,19 +1,29 @@
 import random
+import discord
 from Framework.Shimari.Class.BASE import Base, BucketType
+from Framework.Shimari.Class.AI import AI
 from Framework.Shimari.Tasks.DataHandler import YAML
 
 
 class Evaluator:
-    def __init__(self, *BASE: Base):
+    def __init__(self, BASE: list[tuple[discord.Member, Base]]):
         self.BASE = []
-        for obj in BASE[0]:
-            self.BASE.append(obj)
+        self.USER = []
+        for obj in BASE:
+            self.BASE.append(obj[1])
+            self.USER.append(obj[0])
         self.CurrentPlayer = 0
         self.__YAML = YAML(BucketType.Config)
 
     @property
-    def Current(self):
+    def CurrBASE(self):
         return self.BASE[self.CurrentPlayer]
+
+    @property
+    def CurrUser(self):
+        if not isinstance(self.USER[self.CurrentPlayer], AI):
+            return self.USER[self.CurrentPlayer]
+        return None
 
     @staticmethod
     def __Diff(Animus: int, Type: int):
@@ -29,6 +39,7 @@ class Evaluator:
         try:
             i = self.BASE.index(Player)
             del self.BASE[i]
+            del self.USER[i]
         except:
             raise AttributeError("Invalid Player!")
 

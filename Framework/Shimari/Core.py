@@ -1,3 +1,24 @@
+class YAMLError(Exception):
+    def __init__(self, Argument):
+        self.Argument = Argument
+
+
+class ShimariError(Exception):
+    def __init__(self, Argument):
+        self.Argument = Argument
+
+
+class BucketError(Exception):
+    def __init__(self, Argument):
+        self.Argument = Argument
+
+
+class ConstructorError(Exception):
+    def __init__(self, original, error):
+        self.error = error
+        self.error.original = original
+
+
 class BucketMap:
     def __init__(self, Size: int, Overwrite: bool = False):
         self.__Storage = []
@@ -5,8 +26,12 @@ class BucketMap:
         self.__Size = Size
         self.__Last = 0
 
-        if Size < 1 or Size > 2056 or Size % 2 != 0:
-            raise AttributeError("Buckets exceed Size limit or Bucket Number is odd!")
+        if Size < 1:
+            raise ConstructorError(AttributeError, "You need to create at least 1 Bucket!")
+        if Size > 2056:
+            raise ConstructorError(AttributeError, "You cannot create more than 2056 Buckets!")
+        if not Size % 2 == 0:
+            raise ConstructorError(AttributeError, "Your Bucket number needs to be even!")
         for i in range(Size):
             self.__Storage.append([])
 
@@ -16,10 +41,11 @@ class BucketMap:
                 self.__Storage[self.__Last].append(obj)
             self.__Last += 1
             return
-        elif self.Overwrite is True:
+        if self.Overwrite is True:
             self.__Last = 0
+            self.__Storage[self.__Last] = {"OVERWRITTEN": []}
             for obj in Item:
-                self.__Storage[self.__Last].append(obj)
+                self.__Storage[self.__Last]["OVERWRITTEN"].append(obj)
             self.__Last += 1
             return
         raise AttributeError("Bucket is full!")
@@ -69,21 +95,6 @@ class BucketMap:
     @property
     def EditedProtocol(self):
         return self.__PrintEmpty()
-
-
-class YAMLError(Exception):
-    def __init__(self, Argument):
-        self.Argument = Argument
-
-
-class ShimariError(Exception):
-    def __init__(self, Argument):
-        self.Argument = Argument
-
-
-class BucketError(Exception):
-    def __init__(self, Argument):
-        self.Argument = Argument
 
 
 class BucketType:

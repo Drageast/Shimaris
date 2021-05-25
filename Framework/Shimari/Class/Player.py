@@ -2,6 +2,7 @@ from Framework.Shimari.Class.BASE import Base
 
 
 class Player(Base):
+    """Player interface inheriting from Base to create functions to let a User control the Shimaris Actions"""
     def __init__(self, X: tuple):
         super().__init__(X)
         self.__Attacking = ["🛡️", "1️⃣", "2️⃣", "3️⃣", "4️⃣"]

@@ -5,6 +5,7 @@ import requests
 
 
 class YAML:
+    """Used for formatting, editing and refactoring of a .yaml database. Uses BucketTypes to control behavior; NOT using BucketMap for Protocols"""
     def __init__(self, Typ: BucketType.List or BucketType.Unpack or BucketType.Config):
         self.__Typ = Typ
         self.__Data = Path(__file__).parent / "Database/Data.yaml"

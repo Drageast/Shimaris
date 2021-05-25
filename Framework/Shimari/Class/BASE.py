@@ -1,16 +1,20 @@
-from Framework.Shimari.Core import ShimariError, BucketType, BucketMap
+from Framework.Shimari.Core import BucketType, BucketMap, ConstructorError
 from Framework.Shimari.Tasks.DataHandler import YAML
 import discord
 
 
 class Base:
-    def __init__(self, X: tuple):
-        if not isinstance(X, tuple):
-            raise ShimariError("Input must be a tuple!")
+    """Used to create a Shimari from a tuple, creates a Standardised Protocol from the BucketMap -- Base for all Shimari related Operations"""
+    def __init__(self, X: tuple, Overwrite: bool = False):
+        if not isinstance(X, tuple) or not len(str(X[0])) == 4:
+            raise ConstructorError(AttributeError, "Constructor needs to be a tuple, consisting of ID and Rarity!")
         ID, Rarity = X
-        data = YAML(BucketType.Unpack).GET(ID)
+        try:
+            data = YAML(BucketType.Unpack).GET(ID)
+        except Exception:
+            raise ConstructorError(AttributeError, "Constructor needs a valid tuple for constructing!")
 
-        self.Protocol = BucketMap(2056)
+        self.Protocol = BucketMap(2056, Overwrite=Overwrite)
         self.LastAttr = None
         self.ID = ID
         self.Avatar = data.Avatar
@@ -64,9 +68,6 @@ class Base:
                 stats = balance[4]
                 self.Hp += stats[0]
                 self.Animus += stats[1]
-        else:
-            raise ShimariError("Stats are already updated!")
-
 
     def GetRarity(self):
         return "Normal" if self.Rarity == 1 else ("Selten" if self.Rarity == 2 else ("Legendär" if self.Rarity == 3 else "Exotisch"))
